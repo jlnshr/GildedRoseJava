@@ -39,6 +39,6 @@ To Start, get source from github : [GitHub Repository EmilyBache](https://github
 
 ## Better Code Hub
 
-I analysed this repo according to the clean code standards on [Better Code Hub](https://bettercodehub.com) just to get an independent opinion of how bad the code is.
+I analysed this repo according to the clean code standards on [Better Code Hub](https://bettercodehub.com) just to get an independent opinion of how good the code is after refactoring.
 
 [![BCH compliance](https://bettercodehub.com/edge/badge/jlnshr/GildedRoseJava?branch=master)](https://bettercodehub.com/)
