@@ -32,7 +32,7 @@ Feel free to make any changes to the UpdateQuality method and add any new code a
 
 Source [iamnotmyself.com](https://iamnotmyself.com/2011/02/13/refactor-this-the-gilded-rose-kata/)
 
-###Source code
+### Source code
 
 To Start, get source from github : [GitHub Repository EmilyBache](https://github.com/emilybache/GildedRose-Refactoring-Kata)
 
