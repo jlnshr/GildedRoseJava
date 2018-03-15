@@ -4,8 +4,10 @@ class GildedRose {
     private static final String BACKSTAGE_PASSES_TO_A_TAFKAL80_ETC_CONCERT = "Backstage passes to a TAFKAL80ETC concert";
     private static final String SULFURAS_HAND_OF_RAGNAROS = "Sulfuras, Hand of Ragnaros";
     private static final String AGED_BRIE = "Aged Brie";
+    private static final String CONJURED_MANA_CAKE = "Conjured Mana Cake";
     private static final int MAXI_QUALITY = 50;
     private static final int ONE_AS_DIGIT = 1;
+    private static final int ZERO = 0;
     Item[] items;
 
     public GildedRose(Item[] items) {
@@ -57,15 +59,20 @@ class GildedRose {
     }
 
     private void treatItemWithQualityGreaterZero(Item item) {
-        if (item.quality > 0) {
+        if (item.quality > ZERO) {
             if (isNotHandOfRagnaros(item)) {
+                item.quality = reduceQuality(item);
+            }
+        }
+        if (item.name.equals(CONJURED_MANA_CAKE)) {
+            if (item.quality > ZERO) {
                 item.quality = reduceQuality(item);
             }
         }
     }
 
     private int reduceQuality(Item item) {
-        return item.quality - 1;
+        return item.quality - ONE_AS_DIGIT;
     }
 
     private void treatExpiredItem(Item item) {
@@ -74,7 +81,7 @@ class GildedRose {
                 if (!isBackstagePass(item)) {
                     treatItemWithQualityGreaterZero(item);
                 } else {
-                    item.quality = 0;
+                    item.quality = ZERO;
                 }
             } else {
                 if (hasQualityMinorFifty(item)) {
